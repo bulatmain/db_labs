@@ -1,0 +1,18 @@
+Table customer {
+  id int [primary key]
+  username varchar
+  email varchar
+}
+
+Table order {
+  id int [primary key]
+  customer_id int [ref: < customer.id]
+  order_date date
+}
+
+Table product {
+  id int [primary key]
+  order_id int [ref: < order.id]
+  price int
+}
+

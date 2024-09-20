@@ -1,0 +1,17 @@
+Table cource {
+  id int [primary key]
+  name varchar
+}
+
+Table student {
+  id int [primary key]
+  name varchar
+}
+
+Table progress {
+  id int [primary key]
+  cource_id int [ref: > cource.id]
+  student_id int [ref: > student.id]
+  percentage int
+}
+
